@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+
 class Cat extends Model {}
 
 Cat.init(
@@ -11,33 +12,38 @@ Cat.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    make: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    model: {
+    breed: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true
     },
-    mileage: {
+    size: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
-    driver_id: {
+    affection: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'driver',
-        key: 'id',
-      },
+      defaultValue: 0,
+    },
+    availability: {
+      type: DataTypes.INTEGER,
+    },
+    picture: {
+      type: DataTypes.STRING,
     },
   },
   {
     sequelize,
+    modelName: 'cat',
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'car',
   }
 );
 
-module.exports = Car;
+
+
+module.exports = Cat;

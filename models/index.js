@@ -1,4 +1,8 @@
-const Car = require('./Cat');
+const Cat = require('./Cat');
+const User = require('./User');
 
+Cat.belongsTo(User, {
+    foreignKey: 'cat_id'
+})
 
-module.exports = { Car };
+module.exports = { Cat, User };
