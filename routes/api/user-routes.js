@@ -2,9 +2,12 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 
+// /api/user/
+
+
 //get on user
 
-router.get('/user/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id)
     res.status(200).json(userData)
@@ -42,7 +45,11 @@ router.post('/', async (req, res) => {
   }
 });
 
+
+
+
 // Login
+
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({

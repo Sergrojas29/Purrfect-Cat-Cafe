@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 // Initializes Sequelize with session store
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const {Cat, User} = require('./models')
+// const {Cat, User} = require('./models')
 
 // const { strict } = require('assert');
 const routes = require('./routes');
@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 sequelize.sync().then(() => {
   app.listen(PORT, () =>
     console.log(
-      `\nServer running on port ${PORT}. Visit http://localhost:${PORT} and create an account!`
+      `\nServer running on port ${PORT}. Visit http://localhost:${PORT}`
     )
   );
 });

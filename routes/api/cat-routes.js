@@ -1,10 +1,12 @@
 const router = require('express').Router();
-const { Cat } = require('../models');
+const { Cat } = require('../../models');
 
+
+/// /api/cat/
 
 
 // GET one cat
-router.get('/Cat/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const dbCatData = await Cat.findByPk(req.params.id);
 
