@@ -4,6 +4,7 @@ const catData = [{
     name: 'Purrchill',
     breed: 'Maine Coon',
     size: 3,
+    age: 1,
     affection: 4,
     availability: 0,
 
@@ -12,6 +13,7 @@ const catData = [{
     name: "Cleocatra",
     breed: "Charteux",
     size: 0,
+    age: 1,
     affection: 0,
     availability: 0,
     picture: ""
@@ -20,6 +22,7 @@ const catData = [{
     name: "Draco Meowfoy",
     breed: "",
     size: 0,
+    age: 1,
     affection: 0,
     availability: 0,
     picture: ""
@@ -28,6 +31,7 @@ const catData = [{
     name: "Hairy Pawter",
     breed: "Birman",
     size: 0,
+    age: 1,
     affection: 0,
     availability: 0,
     picture: ""
@@ -36,6 +40,7 @@ const catData = [{
     name: "Kitty Smalls",
     breed: "Siamese cat",
     size: 0,
+    age: 1,
     affection: 0,
     availability: 0,
     picture: ""
@@ -44,6 +49,7 @@ const catData = [{
     name: "TuPaw Shapurr",
     breed: "American Shorthair",
     size: 3,
+    age: 1,
     affection: 5,
     availability: 0,
     picture: ""
@@ -52,6 +58,7 @@ const catData = [{
     name: "Obi-Wan Catnobi",
     breed: "American Shorthair",
     size: 0,
+    age: 1,
     affection: 0,
     availability: 0,
     picture: ""
@@ -60,6 +67,7 @@ const catData = [{
     name: "Meowlennium Falcon",
     breed: "American Shorthair",
     size: 0,
+    age: 1,
     affection: 0,
     availability: 0,
     picture: ""
@@ -68,6 +76,7 @@ const catData = [{
     name: "Luke Skywhisker",
     breed: "American Shorthair",
     size: 0,
+    age: 1,
     affection: 0,
     availability: 0,
     picture: ""
@@ -76,6 +85,7 @@ const catData = [{
     name: "Catalie Pawtman",
     breed: "American Shorthair",
     size: 0,
+    age: 1,
     affection: 0,
     availability: 0,
     picture: ""

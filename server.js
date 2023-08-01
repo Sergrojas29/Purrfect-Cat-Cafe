@@ -31,8 +31,6 @@ const sess = {
   }),
 };
 
-app.use(session(sess));
-app.use(routes);
 
 const hbs = exphbs.create();
 
@@ -43,6 +41,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session(sess));
+app.use(routes);
 
 
 sequelize.sync().then(() => {

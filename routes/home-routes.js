@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Cat } = require('../../models');
 
-
-
 // GET one cat
 router.get('/Cat/:id', async (req, res) => {
   try {
@@ -18,7 +16,6 @@ router.get('/Cat/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 // Login route
 router.get('/login', (req, res) => {

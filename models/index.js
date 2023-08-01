@@ -1,7 +1,7 @@
 const Cat = require('./Cat')
 const User = require('./User')
 
-Cat.belongsTo(User, {
+User.belongsTo(Cat, {
     foreignKey: 'cat_id'
 })
 

@@ -8,7 +8,6 @@ Cat.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -23,6 +22,11 @@ Cat.init(
     size: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      allowNull: true
     },
     affection: {
       type: DataTypes.INTEGER,
@@ -43,7 +47,5 @@ Cat.init(
     underscored: true,
   }
 );
-
-
 
 module.exports = Cat;

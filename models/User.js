@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-
+const bcrypt = require('bcrypt')
 const sequelize = require('../config/connection');
 
 class User extends Model {
@@ -41,18 +41,39 @@ User.init(
       },
     },
   },
-    {
-      // hooks: {
-      //   async beforeCreate(newUserData) {
-      //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
-      //     return newUserData;
-      //   },
-      // },
-      sequelize,
-      timestamps: false,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'user',
+  {
+    hooks: {
+      beforeCreate: async (newData) => {
+        try {
+          newData.password = await bcrypt.hash(newData.password, 10);
+        } catch (err) {
+          console.log(err);
+        }
+      },
+      beforeBulkCreate: async (bulk) => {
+        try {
+          bulk.map( async (user) => {
+            user.dataValues.password = await bcrypt.hash(user.dataValues.password, 10)
+            return user.dataValues.password
+          }
+          )
+        } catch (err) {
+          console.log(err);
+        }
+      },
+      beforeUpdate: async (update) => {
+        try {
+          update.password = await bcrypt.hash(update.password, 10);
+        } catch (err) {
+          console.log(err);
+        }
+      },
+    },
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
   },
 );
 
