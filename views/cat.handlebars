@@ -1,0 +1,11 @@
+{{#if loggedIn}}
+<section class="card">
+    <header>{{name}}</header>
+    {{#each cat.picture as |picture|}} 
+    {{> cat-profile}}
+    {{/each}}
+    </a>
+</section>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}

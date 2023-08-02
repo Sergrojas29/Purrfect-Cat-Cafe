@@ -2,15 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
-  <link rel="stylesheet" href="/css/jass.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Cafe</title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 
 <body>
+    <header>
+        <!-- <div id="logoContainer">
+            <img src="./assets/images/Logo1.svg" alt="logo" id="logo">
+        </div> -->
+        <div id="btnContainer">
+            <button class="btnHeader">About Us</button>
+            <button class="btnHeader">Menu</button>
+            <button class="btnHeader">Meet our Cats</button>
+            {{#if loggedIn}}
+            <button class="btnHeader" id="logout">Logout</button>
+            {{else}}
+            <button class="btnHeader" href="/login">Login</button>
+            {{/if}}
+        </div>
+    </header>
 
     {{{ body }}}
 
+    <footer>
+        
+
+    </footer>
+</body>
 
 </html>

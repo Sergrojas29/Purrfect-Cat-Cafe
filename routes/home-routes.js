@@ -1,29 +1,27 @@
 const router = require('express').Router();
-const { Cat } = require('../../models');
+const { User } = require('../models');
 
-// GET one cat
-router.get('/Cat/:id', async (req, res) => {
-  try {
-    const dbCatData = await Cat.findByPk(req.params.id);
-
-    // const cat = dbCatData.get({ plain: true });
-
-    res.status(200).json(dbCatData)
-    // res.render('cat', { cat, loggedIn: req.session.loggedIn });
-
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+router.get('/main', async (req, res) => {
+  res.render('homepage');
+  // res.status(200).send("<h1>Hello</h1>")
 });
 
-// Login route
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
+router.get('/login', async (req, res) => {
   res.render('login');
+  // res.status(200).send("<h1>Hello</h1>")
+});
+
+router.get('/meetourcats', async (req, res) => {
+  res.render('cat');
+  // res.status(200).send("<h1>Hello</h1>")
+});
+router.get('/aboutus', async (req, res) => {
+  res.render('cat');
+  // res.status(200).send("<h1>Hello</h1>")
+});
+router.get('/menu', async (req, res) => {
+  res.render('cat');
+  // res.status(200).send("<h1>Hello</h1>")
 });
 
 module.exports = router;

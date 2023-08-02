@@ -50,22 +50,17 @@ User.init(
           console.log(err);
         }
       },
-      beforeBulkCreate: async (bulk) => {
-        try {
-          bulk.map( async (user) => {
-            user.dataValues.password = await bcrypt.hash(user.dataValues.password, 10)
-            return user.dataValues.password
+      beforeBulkCreate: (bulk) => {
+          bulk.forEach((user) => {
+            user.dataValues.password = bcrypt.hashSync(user.dataValues.password, 10)
           }
           )
-        } catch (err) {
-          console.log(err);
-        }
       },
-      beforeUpdate: async (update) => {
+      beforeUpdate: async (updatedUserData) => {
         try {
-          update.password = await bcrypt.hash(update.password, 10);
-        } catch (err) {
-          console.log(err);
+          updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        } catch (error) {
+          console.log(error);
         }
       },
     },
@@ -76,5 +71,15 @@ User.init(
     modelName: 'user',
   },
 );
+
+
+
+
+// User.beforeBulkCreate( (user) => {
+//   user.forEach((user) => {
+//     user.dataValues.password = bcrypt.hashSync(user.dataValues.password,10 )
+//   })
+// })
+
 
 module.exports = User;

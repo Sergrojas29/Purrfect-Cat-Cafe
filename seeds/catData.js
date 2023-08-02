@@ -20,7 +20,7 @@ const catData = [{
 },
 {
     name: "Draco Meowfoy",
-    breed: "",
+    breed: "Persian",
     size: 0,
     age: 1,
     affection: 0,
