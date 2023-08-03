@@ -15,15 +15,15 @@
         <!-- <div id="logoContainer">
             <img src="./assets/images/Logo1.svg" alt="logo" id="logo">
         </div> -->
-        <div id="btnContainer">
-            <button class="btnHeader">About Us</button>
-            <button class="btnHeader">Menu</button>
-            <button class="btnHeader">Meet our Cats</button>
-            <button class="btnHeader">Login</button>
+        <div id="linkContainer">
+            <a class="linkHeader" href="aboutus">About Us</a>
+            <a class="linkHeader" href="menu">Menu</a>
+            <a class="linkHeader" href="meetourcats">Meet our Cats</a>
+            <a class="linkHeader" href="login">Login</a>
         </div>
     </header>
 
-    <main>
+    <!-- <main>
         <section>
             <form action="result.html" method="GET">
                 <div class="card">
@@ -65,16 +65,53 @@
                 </div>
             </div>
         </section>
-        
 
 
 
 
-    </main>
+
+    </main> -->
 
 
+    <section id="homeIntroContain">
+        <div id="titleContain">
+            <h1 id="hometitle">WELCOME</h1>
+            <h1 id="hometitle">TO THE</h1>
+            <h1 id="hometitle">CAT CAFE</h1>
+        </div>
+        <div id="imgContain">
+            <img class="catProfile" src="./assets/home-cat.jpg" alt="cat on couch">
+        </div>
+    </section>
+
+    <section class="HomeCardContain">
+        <div class="homecard" id="card_menu">
+            <h1 id="cat_name">View our Menu</h1>
+            <a class="cardbtn" href="/menu">VIEW MENU</a>
+        </div>
+        <div class="homecard"  id="card_cat">
+            <h1 id="cat_name">Come meet our Cats!</h1>
+            <a class="cardbtn" href="/meetourcats">VIEW OUR CATS</a>
+        </div>
+        <div class="homecard"  id="card_login">
+            <h1 id="cat_name">Become a Patron</h1>
+            <a class="cardbtn" href="/login">SIGN UP</a>
+        </div>
+    </section>
 
     <footer>
+        <div id="footerContain">
+            <div id="address">
+                <h8 class="footerTitle">Address</h8>
+                <h9>303 Meowtain rd</h9>
+                <h9>Cater, NJ 01010</h9>
+            </div>
+            <div id="Hours">
+                <h7 class="footerTitle">Open Hours</h7>
+                <h9>Mon-Fri: 9AM - 9PM</h9>
+                <h9>SAT-SUN: 12PM - 10PM</h9>
+            </div>
+        </div>
 
     </footer>
 </body>

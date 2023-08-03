@@ -86,6 +86,10 @@ router.put('/password/:id', withAuth, async (req, res) => {
 });
 
 // CREATE new user
+//test create user with HTML POST
+// router.post( '/:', async (req, res) => {
+
+// })
 router.post('/', async (req, res) => {
   try {
 

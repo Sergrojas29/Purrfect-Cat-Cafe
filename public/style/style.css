@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: founders-heading, sans-serif;
+    /* font-family: founders-heading, sans-serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root {
     --Primary: #f4f4f8;
-    --Seconnday: #fed766;
+    --Seconnday: #e3d8b8;
     --Accent: #fe4a49;
     --Base: #2ab7ca;
     --BaseDark: #218d9b;
@@ -36,17 +37,22 @@ header {
         margin-bottom: 10px;
     }
 
-    >#btnContainer {
-        >.btnHeader {
+    >#linkContainer {
+        padding: 15px 0;
+
+        >.linkHeader {
+            border: solid 1pt red;
             text-transform: uppercase;
             background: var(--Base);
             border: none;
             margin: 10px;
             padding: 10px;
-            color: black;
+            color: white;
             font-size: var(--LargeScreenText);
             border-radius: 5px;
             font-size: 13pt;
+            font-style: none;
+            text-decoration: none;
         }
 
         >.btnHeader:hover {
@@ -60,10 +66,14 @@ main {
     flex-direction: row;
     width: 100vw;
     justify-content: center;
-    border: solid 2pt blue;
+    align-content: center;
+    align-items: center;
+    border: solid 2pt red;
+    height: 500px;
 }
 
 .card {
+
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -72,12 +82,7 @@ main {
     padding: 20px;
     border-radius: 5px;
     margin: 0 10px;
-    /* justify-content: center; */
-    /* justify-items: center; */
-    /* justify-self: center; */
-    /* align-content: center; */
-    /* align-items: center; */
-    /* align-self: center; */
+
 }
 
 input {
@@ -122,12 +127,12 @@ label {
         flex-direction: column;
         align-content: center;
         height: 100%;
-      
+
 
         >h1 {
             /* border: solid 1pt red; */
             text-align: center;
-            margin:  5px 0;
+            margin: 5px 0;
             font-size: 20pt;
         }
 
@@ -152,7 +157,7 @@ label {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin: 0 15px ;
+            margin: 0 15px;
             margin-top: 5px;
 
             >.cirlceinfo {
@@ -170,5 +175,120 @@ label {
             }
         }
 
+    }
+}
+
+/* !   HOME     */
+#homeIntroContain {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    justify-self: center;
+    margin: 30px auto;
+    /* border: solid 1pt red; */
+    background-color: var(--Button);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#titleContain {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 50%;
+    font-size: 36pt;
+    align-self: center;
+    /* border: solid 1pt purple; */
+    justify-content: space-between;
+}
+
+#hometitle {
+    margin-right: 30px;
+    text-align: right;
+}
+
+#imgContain {
+    height: 400px;
+    width: 50%;
+
+    >.catProfile {
+        height: 400px;
+    }
+}
+
+
+
+/*! home Cards */
+
+.HomeCardContain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.homecard{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    border: solid 1pt red ;
+    height: 600px;
+    width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#card_menu,#card_cat,#card_login{
+    background-image: url(/assets/cat-coffee.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;    
+}
+#card_cat{
+    background-image: url(/public/assets/cat-coffee.jpg);
+  
+}
+#card_login{
+    background-image: url(/public/assets/cat-coffee.jpg);
+    
+}
+
+
+/*!! footer */
+
+footer {
+    background: var(--BaseDark);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 30px 0;
+}
+
+#footerContain {
+    display: flex;
+    flex-direction: row;
+    color: #e3e3e3;
+}
+
+#address,
+#Hours {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    >.footerTitle {
+        border-bottom: solid 1pt #e3e3e3;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #footerContain {
+        border: solid 1pt red;
+        display: flex;
+        flex-direction: column;
     }
 }

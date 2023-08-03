@@ -1,36 +1,29 @@
-<div class="row justify-space-between-md">
-  <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="login-card">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
+<main>
+  <section>
+    <form action="/api/user/" method="POST">
+      <div class="card">
+        <label for="first_name">First name:</label>
+        <input type="text" name="first_name" id="first_name" placeholder="">
+        <label for="last_name">Last name:</label>
+        <input type="text" name="last_name" id="last_name" placeholder="">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="">
+        <label for="password">Password:</label>
+        <input type="text" name="password" id="password" placeholder="">
+        <button class="btnSubmit" type="submit">Create Account</button>
       </div>
     </form>
-  </div>
-</div>
+  </section>
 
-<script src="./js/login.js"></script>
+  <section>
+    <form action="login" method="GET">
+      <div class="card">
+        <label for="User_email">Email:</label>
+        <input type="Login_email" name="email" id="User_email" placeholder="">
+        <label for="User_password">Password:</label>
+        <input type="text" name="password" id="User_password" placeholder="">
+        <button class="btnSubmit" type="submit">Login</button>
+      </div>
+    </form>
+  </section>
+</main>

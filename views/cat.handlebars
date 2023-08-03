@@ -1,11 +1,30 @@
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}}
 <section class="card">
     <header>{{name}}</header>
-    {{#each cat.picture as |picture|}} 
+    {{#each cat.picture as |picture|}}
     {{> cat-profile}}
     {{/each}}
     </a>
 </section>
 {{else}}
 <a href="/login">You must login first to view this page</a>
-{{/if}}
+{{/if}} --}}
+
+<main>
+    {{#each cats as |cat|}}
+
+    <section id="catCard">
+        <div id="cardContent">
+            <h1 id="cat_name"><span>🐱</span> {{cat.name}} <span>🐱</span></h1>
+            <img class="catProfile" src="./Cats/{{cat.name}}.jpg" alt="CatPicture">
+            <h2 id="breed">{{cat.breed}}</h2>
+            <div id="Catinfo">
+                <div class="cirlceinfo" id="age">{{cat.age}}yr</div>
+                <div class="cirlceinfo" id="size">{{cat.size}}</div>
+                <div class="cirlceinfo" id="affection">{{cat.affection}}</div>
+                <div class="cirlceinfo" id="availability">{{cat.availability}}</div>
+            </div>
+        </div>
+    </section>
+     {{/each}}
+</main>

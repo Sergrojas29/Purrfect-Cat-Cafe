@@ -13,14 +13,15 @@
         <!-- <div id="logoContainer">
             <img src="./assets/images/Logo1.svg" alt="logo" id="logo">
         </div> -->
-        <div id="btnContainer">
-            <button class="btnHeader">About Us</button>
-            <button class="btnHeader">Menu</button>
-            <button class="btnHeader">Meet our Cats</button>
+        <div id="linkContainer">
+            <a class="linkHeader" href="aboutus">About Us</a>
+            <a class="linkHeader" href="menu">Menu</a>
+            <a class="linkHeader" href="meetourcats">Meet our Cats</a>
             {{#if loggedIn}}
-            <button class="btnHeader" id="logout">Logout</button>
+            <a class="linkHeader" href="logout" style="color: #fe4a49;">logout</a>
             {{else}}
-            <button class="btnHeader" href="/login">Login</button>
+            {{!-- style="background: #238636; color: whitesmoke;" --}}
+            <a class="linkHeader"  href="login">Login</a>
             {{/if}}
         </div>
     </header>
@@ -28,7 +29,19 @@
     {{{ body }}}
 
     <footer>
-        
+        <div id="footerContain">
+            <div id="address">
+                <h8 class="footerTitle">Address</h8>
+                <h9>303 Meowtain rd</h9>
+                <h9>Cater, NJ 01010</h9>
+            </div>
+            <div id="Hours">
+                <h7 class="footerTitle">Open Hours</h7>
+                <h9>Mon-Fri: 9AM - 9PM</h9>
+                <h9>SAT-SUN: 12PM - 10PM</h9>
+            </div>
+        </div>
+
 
     </footer>
 </body>

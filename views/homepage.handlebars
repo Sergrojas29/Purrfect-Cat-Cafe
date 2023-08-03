@@ -1,16 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-</head>
 <body>
-    <h1>WELCOME TO THE <span>🐱</span>CAT CAFE<span>🐱</span></h1>
-     <section id="catCard">
-            <div id="cardContent">
-                <img class="catProfile" src="/Cats/Papaya.jpg" alt="CatPicture">
-            </div>
+    <section id="homeIntroContain">
+        <div id="titleContain">
+            <h1 id="hometitle">WELCOME</h1>
+            <h1 id="hometitle">TO THE</h1>
+            <h1 id="hometitle">CAT CAFE</h1>
+        </div>
+        <div id="imgContain">
+            <img class="catProfile" src="./assets/home-cat.jpg" alt="cat on couch">
+        </div>
     </section>
+
+    <section class="HomeCardContain">
+        <div class="homecard" id="card_menu">
+            <h1 id="cat_name">View our Menu</h1>
+            <a class="cardbtn" href="/menu">VIEW MENU</a>
+        </div>
+        <div class="homecard"  id="card_cat">
+            <h1 id="cat_name">Come meet our Cats!</h1>
+            <a class="cardbtn" href="/meetourcats">VIEW OUR CATS</a>
+        </div>
+        <div class="homecard"  id="card_login">
+            <h1 id="cat_name">Become a Patron</h1>
+            <a class="cardbtn" href="/login">SIGN UP</a>
+        </div>
+    </section>
+
+    {{!-- <section id="homeIntro">
+        <div id="titleContain">
+            <h1 id="hometitle">WELCOME TO THE CAT CAFE</h1>
+        </div>
+        <div id="imgContain">
+            <img class="catProfile" src="/assets/home-cat.jpg" alt="cat on couch">
+        </div>
+    </section> --}}
 </body>
-</html>
