@@ -33,10 +33,7 @@ Cat.init(
       defaultValue: 0,
     },
     availability: {
-      type: DataTypes.INTEGER,
-    },
-    picture: {
-      type: DataTypes.STRING,
+      type: DataTypes.BOOLEAN,
     },
   },
   {
