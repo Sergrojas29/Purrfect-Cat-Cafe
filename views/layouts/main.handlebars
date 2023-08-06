@@ -10,18 +10,19 @@
 
 <body>
     <header>
-        <!-- <div id="logoContainer">
-            <img src="./assets/images/Logo1.svg" alt="logo" id="logo">
-        </div> -->
+            <a id="logoContainer" href="home">
+                <img src="/assets/catcoin-token-cats-logo.svg" alt="logo" id="logo" href="home">
+            </a>
+
         <div id="linkContainer">
             <a class="linkHeader" href="aboutus">About Us</a>
             <a class="linkHeader" href="menu">Menu</a>
             <a class="linkHeader" href="meetourcats">Meet our Cats</a>
             {{#if loggedIn}}
-            <a class="linkHeader" href="logout" style="color: #fe4a49;">logout</a>
+            <a class="linkHeader" href="logout" method="GET" style="color: #fe4a49;">logout</a>
             {{else}}
+            <a class="linkHeader" href="login">Login</a>
             {{!-- style="background: #238636; color: whitesmoke;" --}}
-            <a class="linkHeader"  href="login">Login</a>
             {{/if}}
         </div>
     </header>

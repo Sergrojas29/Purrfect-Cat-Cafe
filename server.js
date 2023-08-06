@@ -11,43 +11,40 @@ const sequelize = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Sets up session and connect to our Sequelize db
+
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'ServerSession Secert',
   cookie: {
-    maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
-    httpOnly: true,
-    secure: true,
-    sameSite: 'strict',
+      maxAge: 60 * 60 * 1000,
+      secure: false,
+      httpOnly: true,
+
   },
   resave: false,
   saveUninitialized: true,
-  //   Sets up session store
   store: new SequelizeStore({
-    db: sequelize,
-  }),
+      db: sequelize,
+    }),
 };
-
 
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session(sess));
+app.use(routes);
 app.use(require('./routes/home-routes'))
 
- app.use(session(sess));
 
-app.use(routes);
 
 
 
 sequelize.sync().then(() => {
   app.listen(PORT, () =>
     console.log(
-      `\nServer running on port ${PORT}. Visit http://localhost:${PORT}`
+      `\nServer running on port ${PORT}. Visit http://localhost:${PORT}/home`
     )
   );
 });

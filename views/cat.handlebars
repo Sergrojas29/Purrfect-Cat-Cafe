@@ -16,8 +16,8 @@
     {{#each cats as |cat|}}
 
     <section id="catCard">
-        <div id="cardContent">
-            <h1 id="cat_name"><span>🐱</span> {{cat.name}} <span>🐱</span></h1>
+        <a href="/{{cat.id}}" id="cardContent">
+            <h1 id="cat_name"> {{cat.name}} </h1>
             <img class="catProfile" src="./Cats/{{cat.name}}.jpg" alt="CatPicture">
             <h2 id="breed">{{cat.breed}}</h2>
             <div id="Catinfo">
@@ -30,7 +30,7 @@
                 <div class="cirlceinfo" id="availability" style="background-color: #fe4a49;"></div>
                 {{/if}}
             </div>
-        </div>
+        </a>
     </section>
      {{/each}}
 </main>

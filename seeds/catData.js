@@ -58,7 +58,7 @@ const catData = [{
     availability: true,
 },
 {
-    name: "Meowlennium Falcon",
+    name: "Meowlennium",
     breed: "American Shorthair",
     size: 4,
     age: 6,

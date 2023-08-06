@@ -1,20 +1,19 @@
 <main>
-
     <section id="catCard">
-        <div id="cardContent">
-            <h1 id="cat_name"><span>🐱</span> {{name}} <span>🐱</span></h1>
-            <img class="catProfile" src="./Cats/{{name}}.jpg" alt="CatPicture">
-            <h2 id="breed">{{breed}}</h2>
+        <a href="/{{cat.id}}" id="cardContent">
+            <h1 id="cat_name"> {{cat.name}} </h1>
+            <img class="catProfile" src="./Cats/{{cat.name}}.jpg" alt="CatPicture">
+            <h2 id="breed">{{cat.breed}}</h2>
             <div id="Catinfo">
-                <div class="cirlceinfo" id="age">{{age}}yr</div>
-                <div class="cirlceinfo" id="size">{{size}}</div>
-                <div class="cirlceinfo" id="affection">{{affection}}</div>
+                <div class="cirlceinfo" id="age">{{cat.age}}yr</div>
+                <div class="cirlceinfo" id="size">{{cat.size}}</div>
+                <div class="cirlceinfo" id="affection">{{cat.affection}}</div>
                 {{#if availability}}
                 <div class="cirlceinfo" id="availability" style="background-color: #238636;"></div>
                 {{else}}
                 <div class="cirlceinfo" id="availability" style="background-color: #fe4a49;"></div>
                 {{/if}}
             </div>
-        </div>
+        </a>
     </section>
 </main>
