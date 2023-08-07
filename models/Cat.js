@@ -20,7 +20,7 @@ Cat.init(
       allowNull: true
     },
     size: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       defaultValue: 0,
     },
     age: {

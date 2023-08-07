@@ -3,7 +3,7 @@ const { Cat } = require('../models');
 const catData = [{
     name: 'Purrchill',
     breed: 'Maine Coon',
-    size: 5,
+    size: "Mega Chonker",
     age: 6,
     affection: 4,
     availability: true,
@@ -12,7 +12,7 @@ const catData = [{
 {
     name: "Cleocatra",
     breed: "Charteux",
-    size: 1,
+    size: "A fine Boi",
     age: 3,
     affection: 5,
     availability: true,
@@ -20,7 +20,7 @@ const catData = [{
 {
     name: "Draco Meowfoy",
     breed: "Persian",
-    size: 4,
+    size: "Hefty Chonk",
     age: 2,
     affection: 1,
     availability: false,
@@ -28,7 +28,7 @@ const catData = [{
 {
     name: "Hairy Pawter",
     breed: "Birman",
-    size: 2,
+    size: "He Chonky",
     age: 5,
     affection: 4,
     availability: true,
@@ -36,7 +36,7 @@ const catData = [{
 {
     name: "Kitty Smalls",
     breed: "Siamese cat",
-    size: 5,
+    size: "Mega Chonker",
     age: 4,
     affection: 4,
     availability: false,
@@ -44,7 +44,7 @@ const catData = [{
 {
     name: "TuPaw Shapurr",
     breed: "American Shorthair",
-    size: 3,
+    size: "A Henkin Chonker",
     age: 1,
     affection: 5,
     availability: true,
@@ -52,7 +52,7 @@ const catData = [{
 {
     name: "Obi-Wan Catnobi",
     breed: "American Shorthair",
-    size: 2,
+    size: "He Chonky",
     age: 7,
     affection: 3,
     availability: true,
@@ -60,7 +60,7 @@ const catData = [{
 {
     name: "Meowlennium",
     breed: "American Shorthair",
-    size: 4,
+    size: "Hefty Chonk",
     age: 6,
     affection: 2,
     availability: false,
@@ -68,7 +68,7 @@ const catData = [{
 {
     name: "Luke Skywhisker",
     breed: "American Shorthair",
-    size: 2,
+    size: "He Chonky",
     age: 4,
     affection: 3,
     availability: false,
@@ -76,7 +76,7 @@ const catData = [{
 {
     name: "Catalie Pawtman",
     breed: "American Shorthair",
-    size: 2,
+    size: "He Chonky",
     age: 3,
     affection: 5,
     availability: true,
@@ -84,7 +84,7 @@ const catData = [{
 {
     name: "Papaya",
     breed: "American Shorthair",
-    size: 3,
+    size: "A Henkin Chonker",
     age: 6,
     affection: 5,
     availability: true,

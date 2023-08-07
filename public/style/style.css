@@ -117,7 +117,7 @@ label {
     flex-direction: column;
     background: #f2f2f2;
     border-radius: 15px;
-    height: 350px;
+    height: 300px;
     width: 300px;
     overflow: hidden;
     justify-content: center;
@@ -182,13 +182,89 @@ label {
     }
 }
 
+
+#catCardProfile {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+    border-radius: 15px;
+    height: 700px;
+    max-width: 600px;
+    overflow: hidden;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(158, 158, 158, 0.797);
+
+
+    #cardContent {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        height: 100%;
+        text-decoration: none;
+        color: black;
+
+
+        >h1 {
+            /* border: solid 1pt red; */
+            text-align: center;
+            margin: 5px 0;
+            font-size: 20pt;
+        }
+
+        >img {
+            /* border: solid 1pt red; */
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 10px;
+
+        }
+
+        >h2 {
+            font-size: 14pt;
+            text-align: center;
+            margin-top: 5px;
+            color: #525252;
+            /* border: solid 1pt red; */
+        }
+
+        >#Catinfo {
+            /* border: solid 1pt blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 15px;
+            margin-top: 5px;
+            border-radius: 15px;
+            overflow: hidden;
+
+
+            >.cirlceinfo {
+                color: black;
+                font-weight: 800;
+                display: flex;
+                height: 45px;
+                /* width: 45px; */
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: var(--BaseDark);
+                /* border-radius: 100%; */
+
+            }
+        }
+
+    }
+}
+
 /* !   HOME     */
 #homeIntroContain {
     display: flex;
     flex-direction: row;
-    width: 1200px;
+    max-width: 1200px;
     justify-self: center;
     margin: 30px auto;
+    box-shadow: 0 0 15px gray;
     /* border: solid 1pt red; */
     background-color: var(--Button);
     border-radius: 15px;
@@ -223,28 +299,53 @@ label {
 
 
 /*! home Cards */
-
 .HomeCardContain{
+
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    /* width: 100%; */
 }
 .homecard{
     display: flex;
     flex-direction: column;
+    margin: 15px 0;
+    justify-content: end;
+    align-content: end;
     align-content: flex-end;
-    border: solid 1pt red ;
-    height: 600px;
-    width: 400px;
+    box-shadow: 0 0 15px grey;
+    /* border: solid 1pt red ; */
+    height: 550px;
+    width: 360px;
     border-radius: 15px;
     overflow: hidden;
+}
+
+#cat_name{
+    color: black;
+    margin:  0 auto;
+}
+.cardbtn{
+    background: var(--Button);
+    padding: 10px 30px;
+    text-decoration:  none;
+    margin: 20px auto;
+    border-radius:  15px;
+    color: black;
+}
+.cardbtn:hover{
+    color: white;
+    background: #ac6a59;
 }
 
 #card_menu,#card_cat,#card_login{
     background-image: url(/assets/cat-coffee.jpg);
     background-repeat: no-repeat;
-    background-size: contain;    
+    background-size:cover;    
 }
 #card_cat{
     background-image: url(/assets/meetourcats.jpg)
@@ -254,6 +355,52 @@ label {
     background-image: url(/assets/Patorn.jpg);
     
 }
+
+
+
+
+/*!! Menu / aboutus */
+
+#menu{
+    text-align: center;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    >p{
+        margin: 30px 0;
+        align-self: center;
+        max-width: 500px;
+
+    }
+    >h2{
+        text-decoration: underline;
+    }
+    >ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        align-content: center;
+        align-items: flex-start;
+        align-items: flex-start;
+        justify-content: left;
+        justify-self: left;
+        justify-items: left;
+        padding: 15px;
+        list-style-type: none;
+        >li{
+            >strong{
+                color: var(--Button);
+
+            }
+            text-decoration: none;
+            
+        }
+    }
+}
+
+
+
 
 
 /*!! footer */
