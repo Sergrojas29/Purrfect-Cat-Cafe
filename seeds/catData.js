@@ -86,7 +86,7 @@ const catData = [{
     breed: "American Shorthair",
     size: "A Henkin Chonker",
     age: 6,
-    affection: "",
+    affection: "Likes to walk on Sergio's Keyboard",
     
 },
 ]

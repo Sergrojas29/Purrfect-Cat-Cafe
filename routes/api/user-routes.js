@@ -138,25 +138,25 @@ router.post('/login', async (req, res) => {
       },
     });
 
-    if (!dbUserData) {
-      // If user doesn't exist, respond with an error
-      return res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
-    }
 
-    const validPassword = await dbUserData.checkPassword(req.body.password);
+    const validPassword =  dbUserData.checkPassword(req.body.password);
 
-    if (!validPassword) {
+    if (!validPassword || !dbUserData) {
       // If password is invalid, respond with an error
-      return res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
-    }
-
-    // At this point, both email and password are valid
+       res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
+       return 
+    } else { 
+      
+      // At this point, both email and password are valid
     req.session.loggedIn = true;
     req.session.currentUser = dbUserData;
     console.log(req.session);
     
     // Redirect to a successful login page
     return res.status(200).redirect('/meetourcats');
+    }
+
+    
   } catch (err) {
     console.log(err);
     return res.status(500).json(err);
