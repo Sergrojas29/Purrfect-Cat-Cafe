@@ -6,7 +6,7 @@ const catData = [{
     size: "Mega Chonker",
     age: 6,
     affection: 4,
-    availability: true,
+    availability: "2023-08-07",
 
 },
 {
@@ -15,7 +15,7 @@ const catData = [{
     size: "A fine Boi",
     age: 3,
     affection: 5,
-    availability: true,
+    
 },
 {
     name: "Draco Meowfoy",
@@ -23,7 +23,7 @@ const catData = [{
     size: "Hefty Chonk",
     age: 2,
     affection: 1,
-    availability: false,
+   
 },
 {
     name: "Hairy Pawter",
@@ -31,7 +31,7 @@ const catData = [{
     size: "He Chonky",
     age: 5,
     affection: 4,
-    availability: true,
+  
 },
 {
     name: "Kitty Smalls",
@@ -39,7 +39,7 @@ const catData = [{
     size: "Mega Chonker",
     age: 4,
     affection: 4,
-    availability: false,
+
 },
 {
     name: "TuPaw Shapurr",
@@ -47,7 +47,7 @@ const catData = [{
     size: "A Henkin Chonker",
     age: 1,
     affection: 5,
-    availability: true,
+ 
 },
 {
     name: "Obi-Wan Catnobi",
@@ -55,7 +55,7 @@ const catData = [{
     size: "He Chonky",
     age: 7,
     affection: 3,
-    availability: true,
+    
 },
 {
     name: "Meowlennium",
@@ -63,7 +63,7 @@ const catData = [{
     size: "Hefty Chonk",
     age: 6,
     affection: 2,
-    availability: false,
+    
 },
 {
     name: "Luke Skywhisker",
@@ -71,7 +71,7 @@ const catData = [{
     size: "He Chonky",
     age: 4,
     affection: 3,
-    availability: false,
+    
 },
 {
     name: "Catalie Pawtman",
@@ -79,7 +79,7 @@ const catData = [{
     size: "He Chonky",
     age: 3,
     affection: 5,
-    availability: true,
+    
 },
 {
     name: "Papaya",
@@ -87,7 +87,7 @@ const catData = [{
     size: "A Henkin Chonker",
     age: 6,
     affection: 5,
-    availability: true,
+    
 },
 ]
 

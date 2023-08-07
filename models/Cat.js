@@ -33,7 +33,7 @@ Cat.init(
       defaultValue: 0,
     },
     availability: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.JSON,
     },
   },
   {
