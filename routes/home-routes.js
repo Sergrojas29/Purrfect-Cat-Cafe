@@ -3,7 +3,7 @@ const { User, Cat } = require('../models');
 
 
 
-router.get('/home', async (req, res) => {
+router.get('/', async (req, res) => {
 	const loggedIn = req.session.loggedIn
 	if (req.session.loggedIn) {
 		res.render('homepage',{loggedIn});
