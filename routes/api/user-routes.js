@@ -92,11 +92,18 @@ router.put('/password/:id', withAuth, async (req, res) => {
 // })
 router.post('/', async (req, res) => {
   try {
+    if (req.body.first_name && req.body.last_name && req.body.password && req.body.email) {
+      const dbUserData = await User.create(req.body);
+      console.log(dbUserData)
+      req.session.loggedIn = true;
+      res.status(200).redirect('/meetourcats')
+    } else {
 
-    const dbUserData = await User.create(req.body);
-    req.session.loggedIn = true;
-    res.status(200).redirect('/meetourcats')
-    // res.status(200).json(dbUserData);
+    }
+
+
+
+
 
   } catch (err) {
     console.log(err);
@@ -124,7 +131,6 @@ router.delete('/:id', async (req, res) => {
 
 // Login
 router.post('/login', async (req, res) => {
-
   try {
     const dbUserData = await User.findOne({
       where: {
@@ -133,28 +139,30 @@ router.post('/login', async (req, res) => {
     });
 
     if (!dbUserData) {
-      res
-        .status(400).json({ message: 'Incorrect email or password. Please try again!' });
-      return;
+      // If user doesn't exist, respond with an error
+      return res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
     }
 
     const validPassword = await dbUserData.checkPassword(req.body.password);
+
     if (!validPassword) {
-      res
-        .status(400).json({ message: 'Incorrect email or password. Please try again!' });
-      return;
+      // If password is invalid, respond with an error
+      return res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
     }
 
-
+    // At this point, both email and password are valid
     req.session.loggedIn = true;
+    req.session.currentUser = dbUserData;
     console.log(req.session);
-    res.status(200).redirect('/meetourcats')
-
+    
+    // Redirect to a successful login page
+    return res.status(200).redirect('/meetourcats');
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    return res.status(500).json(err);
   }
 });
+
 
 // // Logout
 // router.get('/logout', async (req, res) => {

@@ -5,7 +5,7 @@ const catData = [{
     breed: 'Maine Coon',
     size: "Mega Chonker",
     age: 6,
-    affection: 4,
+    affection: "Will sit on your lap",
     availability: "2023-08-07",
 
 },
@@ -14,7 +14,7 @@ const catData = [{
     breed: "Charteux",
     size: "A fine Boi",
     age: 3,
-    affection: 5,
+    affection: "Affectionate",
     
 },
 {
@@ -22,7 +22,7 @@ const catData = [{
     breed: "Persian",
     size: "Hefty Chonk",
     age: 2,
-    affection: 1,
+    affection: "Likes to lick",
    
 },
 {
@@ -30,7 +30,7 @@ const catData = [{
     breed: "Birman",
     size: "He Chonky",
     age: 5,
-    affection: 4,
+    affection: "Just headpats",
   
 },
 {
@@ -38,7 +38,7 @@ const catData = [{
     breed: "Siamese cat",
     size: "Mega Chonker",
     age: 4,
-    affection: 4,
+    affection: "Will climb you",
 
 },
 {
@@ -46,7 +46,7 @@ const catData = [{
     breed: "American Shorthair",
     size: "A Henkin Chonker",
     age: 1,
-    affection: 5,
+    affection: "Will take you food",
  
 },
 {
@@ -54,7 +54,7 @@ const catData = [{
     breed: "American Shorthair",
     size: "He Chonky",
     age: 7,
-    affection: 3,
+    affection: "Does mind tricks for treats",
     
 },
 {
@@ -62,7 +62,7 @@ const catData = [{
     breed: "American Shorthair",
     size: "Hefty Chonk",
     age: 6,
-    affection: 2,
+    affection: "Love bites, I promise I dont hurt!",
     
 },
 {
@@ -70,7 +70,7 @@ const catData = [{
     breed: "American Shorthair",
     size: "He Chonky",
     age: 4,
-    affection: 3,
+    affection: "Wants butt scratches but will try to know your drink over",
     
 },
 {
@@ -78,7 +78,7 @@ const catData = [{
     breed: "American Shorthair",
     size: "He Chonky",
     age: 3,
-    affection: 5,
+    affection: "Will beg and bunt",
     
 },
 {
@@ -86,7 +86,7 @@ const catData = [{
     breed: "American Shorthair",
     size: "A Henkin Chonker",
     age: 6,
-    affection: 5,
+    affection: "",
     
 },
 ]

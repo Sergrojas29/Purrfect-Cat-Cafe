@@ -29,8 +29,8 @@ Cat.init(
       allowNull: true
     },
     affection: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0,
+      type: DataTypes.STRING,
+      
     },
     availability: {
       type: DataTypes.JSON,
