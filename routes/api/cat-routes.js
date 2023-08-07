@@ -83,7 +83,7 @@ router.put('/:id', async (req, res) => {
 });
 
 router.put('/date/:id', async (req, res) => {
-  console.log(req.body.date)
+  
   try {
     // First grab the data
     const catData = await Cat.findByPk(req.params.id);

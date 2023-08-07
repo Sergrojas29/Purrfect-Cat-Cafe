@@ -240,22 +240,40 @@ label {
 
         }
 
-        .cirlceinfo {
-            color: black;
-            font-weight: 800;
-            display: flex;
-            height: fit-content;
-            /* width: 45px; */
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: var(--BaseDark);
-            /* border-radius: 100%; */
-
-        }
+        
     }
 
 }
+
+#size, #age, #affection {
+    color: black;
+    font-weight: 800;
+    display: flex;
+    height: fit-content;
+    /* width: 45px; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--BaseDark);
+    /* border-radius: 100%; */
+}
+
+#updateAvailabilityForm{
+    display: flex;
+    height: fit-content;
+    /* width: 45px; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2px
+}
+
+
+
+#submit-btn {
+    margin: 2px
+}
+
 
 #submit-btn {
     display: block;

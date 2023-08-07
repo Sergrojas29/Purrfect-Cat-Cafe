@@ -7,7 +7,7 @@ router.use('/user', userRoutes);
 router.use('/cat', catRoutes);
 
 router.use((req, res)=>{
-    
+   
     res.send("<h1>Wrong Route</h1>")
 })
 
