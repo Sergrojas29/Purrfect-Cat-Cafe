@@ -48,5 +48,8 @@ sequelize.sync().then(() => {
     )
   );
 });
+
+
+
 // to seed heroku
   // "start": "node seeds/seed.js && node server.js",

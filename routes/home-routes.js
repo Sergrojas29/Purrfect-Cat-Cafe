@@ -53,20 +53,20 @@ router.get('/logout', async (req, res) => {
 )
 
 
-// router.get('/:id', async (req, res) => {
-// 	try {
-// 		const loggedIn = req.session.loggedIn
-// 		const catData = await Cat.findByPk(req.params.id)
-// 		const cat = catData.get({ plain: true })
-// 		console.log(cat);
-// 		res.render('catProfile', {cat, loggedIn})
+router.get('/:id', async (req, res) => {
+	try {
+		const loggedIn = req.session.loggedIn
+		const catData = await Cat.findByPk(req.params.id)
+		const cat = catData.get({ plain: true })
+		console.log(cat);
+		res.render('catProfile', {cat, loggedIn})
 
-// 	} catch (error) {
-// 		console.log(error);
+	} catch (error) {
+		console.log(error);
 
-// 	}
-// }
-// )
+	}
+}
+)
 
 
 
