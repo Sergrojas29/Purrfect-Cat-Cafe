@@ -1,178 +1,90 @@
-# 15 Project 2: Interactive Full-Stack Application
-## USER STORY:
-  As a user I want to pet a cat when I drink my coffee, but I want the option make an appointment with a certain cat ahead of time.
+# Project 2: Purrfect Cat Cafe
+![Homepage](./readmeAssets/Homepage.png)
 
+https://new-cat-cafe-748a9644a8c0.herokuapp.com/
 
 
 
+For this Porject we create a fictional Cafe. We create the database and the our own API for the cats and Some existing users. As wells as route using Handle Bars to make faster to render the html straight from the server side.
+We had also implements create users and updated users but were not able to in the time to create a user interface for a user profile.
 
 
-## ACCEPTANCE CRITERIA
-see available cats
-see their info such as: breed, chonk size, and affection level?
-//Affection level is a chart
 
+Description:
+The web page allows users to sign up or login and then make reservations with a cat for our cat cafe. Users will also be see the lineup of the available cats and their various traits. Some examples include their breed, name, age, and even a cat’s affection styles; or ways they like to interact with customers. Users can see other important information by navigating the navbar such as our menu and rules. 
+Admins of the cat cafe can go into the databases to update specific information for the cats at the cat cafe as well.
 
+![Process](./readmeAssets/process.png)
 
 
- cats {
-  id: , -Primary Key
-  cat_name: Papaya,
-  size: chonky,
-  affection: 1, 
-  available: true or false,
-  picture: './photos',
+Node.js and Express.js - to create our API
+MYSQL and Sequelize ORM - to create our database of cats, and users
+Express sessions and cookies - for authentication and store data
+Handlebars - to render the information
+HEROKU - to deploy our web page 
+Figma - for planning
 
- }
 
-patrons {
-  id ,
-  first_name: ,
-  last_name: ,
-  email: ,
-  password: ,
-  cat_id: ,
-  FOREIGN KEY (cat_id)
-  REFERENCES cats(id)
-}
 
 
+#Table of Contents
 
-be able to login
+1. [Authors](#authors)
 
+2. [Usage](#Usage)
+    
+3. [Features](#features)
+    
 
+    
 
 
+## Authors
 
+-[@Sergrojas29](https://github.com/Sergrojas29) | Sergio Rojas-Aguilar
 
+-[@TSalamatin](https://github.com/TSalamatin) | Timothy Salamatin
 
+-[@brendansikorjak](https://github.com/brendansikorjak) | Brendan Sikorjak
 
+-[@BBlumoon](https://github.com/BBlumoon) | Colin Moon
 
 
 
+## Usage
 
+# User Story
 
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
+As a cat lover, I want to visit a cat cafe so that I can enjoy a relaxing time with adorable cats and a cup of coffee.
 
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+As a potential cat adopter, I want to interact with different cats at the cat cafe so that I can find the perfect match for me and my family.
 
-## Project Requirements
+As a Cafe owner I want people to be able to sign up securly to become a patron.
 
-You and your group will use everything you’ve learned over the past six modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+As a Cafe owner I want to allow my partons to reserve cats before coming into the Cafe.
 
-* Use Node.js and Express.js to create a RESTful API.
+As a Cafe owner I want Patron to view cat information.
 
-* Use Handlebars.js as the template engine.
 
-* Use MySQL and the Sequelize ORM for the database.
 
-* Have both GET and POST routes for retrieving and adding new data.
+## Features
 
-* Use at least one new library, package, or technology that we haven’t discussed.
+![Homepage](./readmeAssets/Homepage.png)
 
-* Have a folder structure that meets the MVC paradigm.
+We were able to implement user acount using mysql and and securly login in with session and hashing passwords before the reached out server.
 
-* Include authentication (express-session and cookies).
+![LoginPage](./readmeAssets/login.png)
 
-* Protect API keys and sensitive information with environment variables.
+Even were able to get a redirect to login before being able to login to view our cats
 
-* Be deployed using Heroku (with data).
+![Cats](./readmeAssets/Cats.png)
 
-* Have a polished UI.
+After Moving from there Create a Cat profile and a basic reservation system
 
-* Be responsive.
 
-* Be interactive (i.e., accept and respond to user input).
+![Cat-Profile](./readmeAssets/cat%20profile.png)
 
-* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
-* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+EXTRA: An About Us and Cafe Menu
 
-## Presentation Requirements
 
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
-
-* Elevator pitch: a one minute description of your application
-
-* Concept: What is your user story? What was your motivation for development?
-
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-* Demo: Show your stuff!
-
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
-
-## Grading Requirements
-
-This project is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 25%
-
-* Satisfies the following code requirements:
-
-  * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
-
-  * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
-
-  * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
-
-  * Application includes user authentication (express-session and cookies).
-
-  * Application uses at least one new library, package, or technology not covered in class.
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL on Heroku and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using a slide deck.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Full-Stack Project
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
